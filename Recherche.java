@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 /**
  * Permet de recherche le nombre d'occurences d'un mot dans une grille de caractères
- * @author Lucas Costagliola 
  */
 public class Recherche {
     public static int chercheMot(String botteDeFoin, String aiguille) {
