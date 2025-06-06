@@ -186,7 +186,7 @@ public class Recherche {
         int largeur = grille.get(0).length();
 
         // Diagonales commençant de la dernière ligne (Sud)
-        for (int col = 0; col < largeur; col--) {
+        for (int col = 0; col < largeur; col++) {
             cpt = cpt + compterLaDiagonale(grille, hauteur - 1, col, -1, 1, mot, motInverse);
         }
         
