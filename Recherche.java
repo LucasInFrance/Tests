@@ -229,16 +229,16 @@ public class Recherche {
      */
     private static String construireStringDiagonale(ArrayList<String> grille, int debutRow, int debutCol, int incrRow, int incrCol) {
         String diagonale = "";
-        int hauteur = grille.size();
-        int largeur = grille.get(0).length();
+        int hauteur= grille.size();
+        int largeur= grille.get(0).length();
         int i = debutRow;
         int j = debutCol;
         
         while (i >= 0 && i < hauteur && j >= 0 && j < largeur) {
             char caractere = grille.get(i).charAt(j);
             diagonale = diagonale + caractere;
-            i = i + incrRow;
-            j = j + incrCol;
+            i = i +incrRow;
+            j = j +incrCol;
         }
         
         return diagonale;
@@ -257,7 +257,7 @@ public class Recherche {
 
         cpt=cpt + nbMot(texte, mot);
         if (!mot.equals(motInverse)) {
-            cpt = cpt + nbMot(texte, motInverse);
+            cpt = cpt + nbMot(texte,motInverse);
         }
         return cpt;
     }
@@ -271,9 +271,9 @@ public class Recherche {
     private static int nbMot(String texte, String mot) {
         int cpt = 0;
         
-        for (int i = 0; i <= texte.length() - mot.length(); i++) {
+        for (int i =0; i <= texte.length() -mot.length(); i++) {
             boolean trouve=true;
-            for (int j = 0; j < mot.length(); j = j + 1) {
+            for (int j= 0; j < mot.length(); j = j + 1) {
                 char caractereTexte=texte.charAt(i + j);
                 char caractereMot=mot.charAt(j);
                 if (caractereTexte != caractereMot) {
