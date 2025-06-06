@@ -17,7 +17,7 @@ public class Recherche {
 
         //Création de la grille (liste de lignes) et Vérification
         ArrayList<String> grille = convertirEnGrille(botteDeFoin);
-        if (!estGrilleCarree(grille)) {
+        if (!estGrilleReguliere(grille)) {
             return -1;
         }
         
@@ -56,11 +56,11 @@ public class Recherche {
     
 
     /**
-     * Vérifie que la grille soit carrée
+     * Vérifie que la grille soit régulière
      * @param grille liste de lignes de la grille
-     * @return true si la grille est carrée, sinon false
+     * @return true si la grille est régulière, sinon false
      */
-    private static boolean estGrilleCarree(ArrayList<String> grille) {
+    private static boolean estGrilleReguliere(ArrayList<String> grille) {
 
         int longueurPremiereLigne=grille.get(0).length();
         for (int i = 0; i < grille.size(); i = i + 1) {
