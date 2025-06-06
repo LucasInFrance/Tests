@@ -9,7 +9,7 @@ public class Recherche {
         if (aiguille == null || botteDeFoin == null) {
             return -1;
         }
-        if (botteDeFoin =="") {
+        if (botteDeFoin.equals("")) {
             return 0;
         }
 
